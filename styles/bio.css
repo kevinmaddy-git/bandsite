@@ -24,7 +24,7 @@
   font-family: "avenir-regular";
   padding-top: 8px;
 }
-.navbar__container-band-logo {
+.navbar__container-bandlogo {
   height: 20px;
   width: 120px;
 }
@@ -75,23 +75,30 @@
   padding-bottom: 12px;
 }
 
-.hero_overlay {
-  background-color: #323232;
-  opacity: 50%;
-}
-
-.hero_image {
+.hero {
   width: 100vw;
-  height: 200px;
-  font-family: "avenir-demi";
+  height: 210px;
   background-image: url(../../assets/Images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: left;
-  color: #ffffff;
   align-items: center;
+}
+.hero-overlay {
+  background-color: #323232;
+  position: absolute;
+  width: 100vw;
+  height: 210px;
+  opacity: 50%;
+}
+.hero-text {
+  font-family: "avenir-demi";
+  color: #ffffff;
+  z-index: 2;
+  padding-left: 16px;
+  font-size: 26px;
 }
 
 .about {
@@ -106,16 +113,13 @@
   font-size: 24px;
 }
 .about-picture {
-  height: 170px;
   padding-bottom: 10px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .about-quote {
   font-size: 15px;
   font-family: "avenir-regular";
   padding-top: 10px;
+  line-height: 22px;
 }
 .about-band {
   font-family: "avenir-regular";
@@ -127,8 +131,68 @@
   font-family: "avenir-regular";
   padding-bottom: 10px;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 0 16px;
+  background-color: #fafafa;
+}
+.gallery-text {
+  font-family: "avenir-demi";
+  font-weight: 400;
+  padding: 16px 0 16px 0;
+}
+.gallery-photos {
+  padding-bottom: 16px;
+}
+
+.footer {
+  background-color: #323232;
+  padding: 0 16px 0 16px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-head {
+  padding: 24px 0 16px 0;
+  font-family: "avenir-demi";
+}
+.footer-icons {
+  padding: 0 24px 0 0;
+}
+.footer-name {
+  font-family: "avenir-regular";
+  line-height: 18px;
+  padding: 24px 0 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.footer-address {
+  font-family: "avenir-regular";
+  line-height: 18px;
+  padding: 0 0 16px 0;
+  font-size: 13px;
+}
+.footer-email {
+  font-family: "avenir-regular";
+  color: #ffffff;
+  font-size: 13px;
+}
+.footer-bandlogo {
+  padding-top: 48px;
+  height: 20px;
+  width: 120px;
+}
+.footer-copyright {
+  font-family: "avenir-regular";
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 11px;
 }
 
 * {

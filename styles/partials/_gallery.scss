@@ -1,0 +1,14 @@
+.gallery {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px 0 16px;
+    background-color: $color-alabaster;
+    &-text {
+        font-family: 'avenir-demi';
+        font-weight: 400;
+        padding: 16px 0 16px 0;
+    }
+    &-photos {
+        padding-bottom: 16px;
+    }
+}

@@ -1,0 +1,47 @@
+.footer {
+    background-color: $color-bandsite-black;
+    padding: 0 16px 0 16px;
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    text-decoration: none;
+    &-head {
+        padding: 24px 0 16px 0;
+        font-family: 'avenir-demi';
+    }
+    &-icons {
+        padding: 0 24px 0 0;
+    }
+    &-name {
+        font-family: 'avenir-regular';
+        line-height: 18px;
+        padding: 24px 0 16px 0;
+        font-size: 14px;
+        font-weight: 500;
+
+    }
+    &-address {
+        font-family: 'avenir-regular';
+        line-height: 18px;
+        padding: 0 0 16px 0;
+        font-size: 13px;
+    }
+    &-email {
+        font-family: 'avenir-regular';
+        color: $color-white;
+        font-size: 13px;
+    }
+    &-bandlogo {
+        padding-top: 48px;
+        height: 20px;
+        width: 120px;
+
+    }
+    &-copyright {
+        font-family: 'avenir-regular';
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 11px;
+
+    }
+}

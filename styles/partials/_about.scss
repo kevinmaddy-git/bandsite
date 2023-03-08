@@ -9,16 +9,13 @@
         font-size: 24px;
     }
     &-picture {
-        height: 170px;
         padding-bottom: 10px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
     &-quote {
         font-size: 15px;
         font-family: 'avenir-regular';
         padding-top: 10px;
+        line-height: 22px;
     }
     &-band {
         font-family: 'avenir-regular';
@@ -30,7 +27,7 @@
         font-family: 'avenir-regular';
         padding-bottom: 10px;
         font-weight: 400;
-        font-size: 13px;
+        font-size: 14px;
         line-height: 18px;
     }
 }
