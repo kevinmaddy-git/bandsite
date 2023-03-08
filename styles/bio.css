@@ -75,18 +75,60 @@
   padding-bottom: 12px;
 }
 
-.hero_text {
+.hero_overlay {
+  background-color: #323232;
+  opacity: 50%;
+}
+
+.hero_image {
   width: 100vw;
-  height: 220px;
+  height: 200px;
+  font-family: "avenir-demi";
   background-image: url(../../assets/Images/hero-bio.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: left;
-  padding-left: 16px;
   color: #ffffff;
   align-items: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  padding: 0 16px 0 16px;
+}
+.about-text {
+  font-family: "avenir-demi";
+  padding-bottom: 10px;
+  font-size: 24px;
+}
+.about-picture {
+  height: 170px;
+  padding-bottom: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about-quote {
+  font-size: 15px;
+  font-family: "avenir-regular";
+  padding-top: 10px;
+}
+.about-band {
+  font-family: "avenir-regular";
+  font-size: 14px;
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+.about-info {
+  font-family: "avenir-regular";
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 * {

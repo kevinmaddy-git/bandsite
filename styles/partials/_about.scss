@@ -1,0 +1,36 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    padding: 0 16px 0 16px;
+    &-text {
+        font-family: 'avenir-demi';
+        padding-bottom: 10px;
+        font-size: 24px;
+    }
+    &-picture {
+        height: 170px;
+        padding-bottom: 10px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &-quote {
+        font-size: 15px;
+        font-family: 'avenir-regular';
+        padding-top: 10px;
+    }
+    &-band {
+        font-family: 'avenir-regular';
+        font-size: 14px;
+        padding-bottom: 10px;
+        padding-top: 15px;
+    }
+    &-info {
+        font-family: 'avenir-regular';
+        padding-bottom: 10px;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
