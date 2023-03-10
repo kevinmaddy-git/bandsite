@@ -226,12 +226,10 @@
     padding-left: 32px;
   }
   .about-picture {
+    padding-top: 16px;
     padding-right: 88px;
     padding-left: 88px;
     height: 300px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
   }
   .about-quote {
     padding: 12px 88px 12px 88px;
@@ -249,7 +247,7 @@
   .about_info {
     display: flex;
     justify-content: center;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 22px;
     font-weight: 200;
     padding-right: 16px;
@@ -266,6 +264,7 @@
 .gallery {
   display: flex;
   flex-direction: column;
+  max-width: 100vw;
   padding: 0 16px 0 16px;
   background-color: #fafafa;
 }
@@ -275,7 +274,9 @@
   padding: 16px 0 16px 0;
 }
 .gallery-photos {
+  padding-right: 16px;
   padding-bottom: 16px;
+  width: 100vw;
 }
 
 img[src*=gallery] {
@@ -285,12 +286,41 @@ img[src*=gallery] {
   filter: gray;
 }
 
+img :hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+  -webkit-transform: scale(0.1);
+}
+
 img:hover {
   -moz-filter: none;
   -ms-filter: none;
   filter: none;
 }
 
+@media screen and (min-width: 768px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+  }
+  .gallery-text {
+    font-size: 36px;
+    padding: 36px 0 16px 32px;
+  }
+  .gallery-photos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 210px;
+    padding-right: 16px;
+  }
+  .photo-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 32px;
+    padding-bottom: 16px;
+  }
+}
 .footer {
   background-color: #323232;
   padding: 0 16px 0 16px;

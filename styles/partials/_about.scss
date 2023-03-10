@@ -49,12 +49,10 @@
             padding-left: 32px;
         }
         &-picture {
+            padding-top: 16px;
             padding-right: 88px;
             padding-left: 88px;
             height: 300px;
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
         }
         &-quote {
             padding: 12px 88px 12px 88px;
@@ -72,7 +70,7 @@
         &_info {
             display: flex;
             justify-content: center;
-            font-size: 13px;
+            font-size: 14px;
             line-height: 22px;
             font-weight: 200;
             padding-right: 16px;
