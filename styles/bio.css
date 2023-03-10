@@ -158,6 +158,20 @@
   font-size: 26px;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 450px;
+  }
+  .hero-overlay {
+    height: 450px;
+  }
+  .hero-text {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+    padding-left: 48px;
+  }
+}
 .about {
   display: flex;
   flex-direction: column;
