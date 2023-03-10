@@ -115,21 +115,23 @@
   }
   .shows {
     display: flex;
+    color: #E1E1E1;
     flex-direction: row;
     justify-content: left;
     padding-bottom: 20px;
     padding-right: 25vw;
+    padding-top: 2px;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 768px) {
   .shows:hover {
     display: flex;
-    color: #ffffff;
     text-decoration-line: underline;
     border-bottom: none;
     text-decoration-thickness: 4px;
-    text-underline-offset: 26px;
-    padding-bottom: 15px;
+    text-underline-offset: 28px;
+    padding-bottom: 18px;
+    padding-top: 2px;
   }
 }
 .hero {
@@ -192,13 +194,19 @@
   padding-top: 10px;
   line-height: 22px;
 }
+.about-quote-name {
+  font-size: 15px;
+  font-family: "avenir-regular";
+  padding-top: 10px;
+  line-height: 22px;
+}
 .about-band {
   font-family: "avenir-regular";
   font-size: 14px;
   padding-bottom: 10px;
   padding-top: 15px;
 }
-.about-info {
+.about_info {
   font-family: "avenir-regular";
   padding-bottom: 10px;
   font-weight: 400;
@@ -206,6 +214,55 @@
   line-height: 18px;
 }
 
+@media screen and (min-width: 768px) {
+  .about {
+    display: flex;
+  }
+  .about-text {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    padding-top: 32px;
+    padding-left: 32px;
+  }
+  .about-picture {
+    padding-right: 88px;
+    padding-left: 88px;
+    height: 300px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .about-quote {
+    padding: 12px 88px 12px 88px;
+    font-size: 21px;
+    line-height: 32px;
+  }
+  .about-quote-name {
+    padding: 0 88px 24px 88px;
+  }
+  .about-band {
+    padding-left: 88px;
+    padding-bottom: 24px;
+    font-size: 21px;
+  }
+  .about_info {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    line-height: 22px;
+    font-weight: 200;
+    padding-right: 16px;
+  }
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    margin-left: 88px;
+    margin-right: 88px;
+    padding-bottom: 16px;
+  }
+}
 .gallery {
   display: flex;
   flex-direction: column;
