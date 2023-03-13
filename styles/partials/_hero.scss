@@ -39,3 +39,18 @@
         }
     }
 }
+@include desktop {
+    .hero {
+        height: 650px;
+        max-width: 100vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &-overlay {
+            height: 650px;
+    }
+    .hero-text {
+        padding-left: 88px;
+    }
+}
+}

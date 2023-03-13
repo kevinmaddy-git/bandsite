@@ -53,6 +53,10 @@
             padding-right: 88px;
             padding-left: 88px;
             height: 300px;
+            object-fit: cover;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         &-quote {
             padding: 12px 88px 12px 88px;
