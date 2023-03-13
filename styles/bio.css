@@ -64,6 +64,7 @@
   padding-bottom: 12px;
   border-bottom: 4px solid #ffffff;
 }
+
 .shows {
   display: flex;
   flex-direction: row;
@@ -301,14 +302,10 @@
     margin-right: 88px;
   }
   .about-picture {
-    width: 800px;
-    height: 450px;
+    height: 650px;
   }
   .about-quote {
-    width: 620px;
-  }
-  .about .row {
-    width: 800px;
+    padding-right: 360px;
   }
 }
 .gallery {
@@ -336,16 +333,11 @@ img[src*=gallery] {
   filter: gray;
 }
 
-img :hover {
+img:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
-  -webkit-transform: scale(0.1);
-}
-
-img:hover {
-  -moz-filter: none;
-  -ms-filter: none;
-  filter: none;
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
 }
 
 @media screen and (min-width: 768px) {
@@ -374,13 +366,14 @@ img:hover {
 @media screen and (min-width: 1280px) {
   .gallery {
     padding-left: 88px;
+    width: 100vw;
   }
   .gallery-text {
     padding-top: 40px;
     padding-bottom: 32px;
   }
   .gallery-photos {
-    width: 300px;
+    width: 350px;
   }
 }
 .footer {
@@ -483,8 +476,17 @@ img:hover {
   .footer {
     padding-left: 124px;
   }
+  .footer-head {
+    margin-right: 16px;
+  }
+  .footer-icons {
+    padding-right: 36px;
+  }
   .footer-band-logo-top {
-    margin-left: 250px;
+    margin-left: 372px;
+  }
+  .footer_contact-container {
+    margin-right: 36px;
   }
 }
 * {

@@ -22,18 +22,15 @@ img[src*=gallery] {
    filter: grayscale(100%);
    filter: gray;
 }
-img :hover {
+img:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
-    -webkit-transform: scale(.1);
-    
-}
-img:hover {
-    -webkit-filter: none;
-    -moz-filter: none;
-    -ms-filter: none;
-    filter: none;
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
  }
+
+ // Tablet Section
+ 
  @include tablet {
     .gallery {
         display: flex;
@@ -64,12 +61,13 @@ img:hover {
 @include desktop {
     .gallery {
         padding-left: 88px;
+        width: 100vw;
         &-text {
             padding-top: 40px;
             padding-bottom: 32px;
         }
         &-photos {
-            width: 300px;
+            width: 350px;
         }
     }
 }

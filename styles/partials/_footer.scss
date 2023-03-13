@@ -46,6 +46,8 @@
 .footer-band-logo-top {
     display: none;
 }
+
+//Tablet Section
 @include tablet {
     .footer { padding-top: 24px;
         padding-left: 32px;
@@ -100,8 +102,17 @@
 @include desktop {
     .footer {
         padding-left: 124px;
+        &-head {
+            margin-right: 16px;
+        }
+        &-icons {
+            padding-right: 36px;
+        }
     }
     .footer-band-logo-top {
-        margin-left: 250px;
+        margin-left: 372px;
+    }
+    .footer_contact-container {
+        margin-right: 36px;
     }
 }

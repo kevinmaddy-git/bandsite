@@ -50,10 +50,8 @@
     color: $color-white;
     padding-bottom: 12px;
     border-bottom: 4px solid $color-white;
-    @include tablet {
-
-    }
 }
+
 .shows {
     display: flex;
     flex-direction: row;
