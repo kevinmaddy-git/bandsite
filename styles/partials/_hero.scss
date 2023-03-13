@@ -39,6 +39,7 @@
         }
     }
 }
+//Desktop Section
 @include desktop {
     .hero {
         height: 650px;
@@ -50,7 +51,7 @@
             height: 650px;
     }
     .hero-text {
-        padding-left: 88px;
+        padding-left: 104px;
     }
 }
 }

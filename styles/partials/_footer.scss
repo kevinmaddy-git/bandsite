@@ -94,3 +94,14 @@
     }
 }
 }
+
+//Desktop Section
+
+@include desktop {
+    .footer {
+        padding-left: 124px;
+    }
+    .footer-band-logo-top {
+        margin-left: 250px;
+    }
+}

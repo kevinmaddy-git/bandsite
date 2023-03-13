@@ -89,3 +89,22 @@
         padding-bottom: 16px;
     }
 }
+
+//Desktop Section
+
+@include desktop {
+    .about {
+        margin-left: 88px;
+        margin-right: 88px;
+        &-picture {
+            width: 800px;
+            height: 450px;
+        }
+        &-quote {
+            width: 620px;
+        }
+    .row {
+        width: 800px;
+    }    
+    }
+}

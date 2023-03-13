@@ -127,13 +127,17 @@
     }
 }
 }
+//Desktop Section
 @include desktop {
     .navbar__container {
-        padding-left: 54px;
+        padding-left: 63px;
         gap: 10px;
+        height: 100px;
+        padding-bottom: 25px;
     }
     .tabs {
+        padding-bottom: 18px;
         width: 200px;
-        margin-left: -25px;
+        margin-left: -24px;
     }
 }

@@ -58,3 +58,18 @@ img:hover {
         padding-bottom: 16px;
     }
  }
+
+ //Desktop Section
+
+@include desktop {
+    .gallery {
+        padding-left: 88px;
+        &-text {
+            padding-top: 40px;
+            padding-bottom: 32px;
+        }
+        &-photos {
+            width: 300px;
+        }
+    }
+}
