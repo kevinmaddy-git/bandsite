@@ -455,7 +455,7 @@ img:hover {
     width: 7.5rem;
     height: 1.25rem;
     padding-top: 2.25rem;
-    padding-left: 11.5rem;
+    padding-left: 24%;
   }
   .footer .footer-bandlogo {
     display: none;
@@ -480,10 +480,10 @@ img:hover {
   .footer-band-logo-top {
     display: flex;
     justify-content: right;
-    margin-left: 23rem;
+    margin-left: 25%;
   }
   .footer_contact-container {
-    margin-right: 2.25rem;
+    margin-right: 2rem;
   }
 }
 * {
