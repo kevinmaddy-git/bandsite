@@ -1,45 +1,46 @@
 .footer {
+    width: 100vw;
     background-color: $color-bandsite-black;
-    padding: 0 16px 0 16px;
+    padding: 0 1rem 0 1rem;
     color: $color-white;
     text-decoration: none;
     &-head {
-        padding: 24px 0 16px 0;
+        padding: 1.5rem 0 1rem 0;
         font-family: 'avenir-demi';
     }
     &-icons {
-        padding: 0 24px 0 0;
+        padding: 0 1.5rem 0 0;
     }
     &-name {
         font-family: 'avenir-regular';
-        line-height: 18px;
-        padding: 24px 0 16px 0;
-        font-size: 14px;
+        line-height: 1.125rem;
+        padding: 1.5rem 0 1rem 0;
+        font-size: .875rem;
         font-weight: 500;
 
     }
     &-address {
         font-family: 'avenir-regular';
-        line-height: 18px;
-        padding: 0 0 16px 0;
-        font-size: 13px;
+        line-height: 1.125rem;
+        padding: 0 0 1rem 0;
+        font-size: .813rem;
     }
     &-email {
         font-family: 'avenir-regular';
         color: $color-white;
-        font-size: 13px;
+        font-size: .813rem;
     }
     &-bandlogo {
-        padding-top: 48px;
-        height: 20px;
-        width: 120px;
+        padding-top: 3rem;
+        height: 1.25rem;
+        width: 7.5rem;
 
     }
     &-copyright {
         font-family: 'avenir-regular';
-        padding-top: 16px;
-        padding-bottom: 16px;
-        font-size: 11px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 0.688rem;
 
     }
 }
@@ -49,30 +50,30 @@
 
 //Tablet Section
 @include tablet {
-    .footer { padding-top: 24px;
-        padding-left: 32px;
+    .footer { padding-top: 1.5rem;
+        padding-left: 2rem;
         &-head {
-          font-size: 36px;
+          font-size: 2.25rem;
           justify-content: left;
-          padding-right: 42px;
+          padding-right: 2.625rem;
         }
         &-icons {
-            height: 30px;
-            width: 10px;
-            padding-top: 30px;
-            padding-right: 30px;
+            height: 1.875rem;
+            width: 0.625rem;
+            padding-top: 1.875rem;
+            padding-right: 1.875rem;
             justify-content: space-evenly;
             align-items: center;
         }
         &-name {
-            padding-bottom: 24px;
+            padding-bottom: 1.5rem;
         }
         &-address {
-            padding-bottom: 24px;
+            padding-bottom: 1.5rem;
         }
         &-copyright {
-            padding-top: 42px;
-            padding-bottom: 32px;
+            padding-top: 2.625rem;
+            padding-bottom: 2rem;
         }
     .git_tablet {
         display: flex;
@@ -80,10 +81,11 @@
     }
     .footer-band-logo-top {
         display: flex;
-        width: 120px;
-        height: 20px;
-        padding-top: 36px;
-        padding-left: 180px;
+        justify-content: right;
+        width: 7.5rem;
+        height: 1.25rem;
+        padding-top: 2.25rem;
+        padding-left: 11.5rem;
     }
     .footer-bandlogo {
         display: none;
@@ -92,7 +94,7 @@
         display: flex;
         flex-direction: column;
         text-align: left;
-        padding-right: 40px;
+        padding-right: 2.5rem;
     }
 }
 }
@@ -101,18 +103,20 @@
 
 @include desktop {
     .footer {
-        padding-left: 124px;
+        padding-left: 7.75rem;
         &-head {
-            margin-right: 16px;
+            margin-right: 1rem;
         }
         &-icons {
-            padding-right: 36px;
+            padding-right: 2.25rem;
         }
     }
     .footer-band-logo-top {
-        margin-left: 372px;
+        display: flex;
+        justify-content: right;
+        margin-left: 23rem;
     }
     .footer_contact-container {
-        margin-right: 36px;
+        margin-right: 2.25rem;
     }
 }
