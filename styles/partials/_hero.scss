@@ -1,0 +1,57 @@
+.hero {
+    width: 100vw;
+    height: 13.125rem;
+    background-image: url(../../assets/Images/hero-bio.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    &-overlay {
+        background-color: $color-bandsite-black;
+        position: absolute;
+        width: 100vw;
+        height: 13.125rem;
+        opacity: 50%;
+    }
+    &-text {
+        font-family: 'avenir-demi';
+        color: $color-white;
+        z-index: 2;
+        padding-left: 1rem;
+        font-size: 1.625rem;
+    }
+    
+}
+// Tablet Section
+@include tablet {
+    .hero {
+        height: 28.125rem;
+        &-overlay {
+            height: 28.125rem;
+        }
+        &-text {
+            font-size: 3.75rem;
+            line-height: 4.25rem;
+            font-weight: 700;
+            padding-left: 3rem;
+        }
+    }
+}
+//Desktop Section
+@include desktop {
+    .hero {
+        height: 40.625rem;
+        max-width: 100vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &-overlay {
+            height: 40.625rem;
+    }
+    .hero-text {
+        padding-left: 7.75rem;
+    }
+}
+}
