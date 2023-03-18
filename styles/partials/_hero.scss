@@ -20,16 +20,16 @@
         color: $color-white;
         z-index: 2;
         padding-left: 1rem;
-        font-size: 1.625rem;
+        font-size: 1.525rem;
     }
     
 }
 // Tablet Section
 @include tablet {
     .hero {
-        height: 28.125rem;
+        height: 26rem;
         &-overlay {
-            height: 28.125rem;
+            height: 26rem;
         }
         &-text {
             font-size: 3.75rem;
