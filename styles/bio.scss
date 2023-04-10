@@ -12,7 +12,9 @@
 a {
     text-decoration: none;
 }
+
 @include media;
+
 // Navbar Section
 .navbar {
     display: flex;
@@ -54,6 +56,7 @@ a {
         display: flex;
         justify-content: center;
         align-content: center;
+        padding-top: .2rem;
         padding-bottom: .55rem;
 
         &:hover,
@@ -198,6 +201,140 @@ a {
     }
 }
 
+//Comments Section
+.comment {
+    margin-top: -4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 5rem;
+
+    &__title {
+        font-family: 'Avenir-Demi';
+        font-size: 1.75rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__image {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin-top: 1.5rem;
+    }
+
+    &__name-container {
+        display: flex;
+        border-bottom: .15rem solid $color-mercury;
+    }
+
+    &__input-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2rem;
+
+        &--text {
+            color: $color-silver;
+            font-size: 0.75rem;
+            padding-top: 1rem;
+            padding-bottom: .5rem;
+        }
+    }
+
+    &__text-container {
+        font-size: .9rem;
+        border: .1rem solid $color-bandsite-black;
+        border-radius: .25rem;
+        width: 22rem;
+        background-color: $color-alabaster;
+        border-color: $color-mercury;
+        resize: none;
+
+        &:focus {
+            border: .15rem solid $color-bandsite-black;
+        }
+
+        &--one {
+            margin: 0 0 0.5rem 0;
+            height: 3rem;
+            padding-top: .825rem;
+            padding-left: .625rem;
+        }
+
+        &--two {
+            padding: .625rem;
+            margin: 0 0 1rem 0;
+            height: 7.5rem;
+        }
+    }
+
+    &__button {
+        background-color: $color-bandsite-black;
+        font-weight: 400;
+        font-size: 1.5rem;
+        border-style: none;
+        height: 4rem;
+        border-radius: 0.25rem;
+        color: $color-white;
+        text-align: center;
+        width: 22rem;
+        margin-bottom: 1rem;
+        padding-top: .5rem;
+        cursor: pointer;
+    }
+
+    &__default {
+        border-bottom: 1px solid $color-mercury;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        &--image-one {
+            height: 3rem;
+            width: 3rem;
+            background-color: $color-mercury;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            float: left;
+            border-radius: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        &--name {
+            color: $color-bandsite-black;
+            font-family: avenir-demi;
+            font-size: 0.8125rem;
+            padding: 1.75rem 0 0 1rem;
+            margin: 0;
+        }
+
+        &--date {
+            color: $color-silver;
+            font-family: avenir-regular;
+            font-size: 0.8125rem;
+            margin: 0;
+            padding: 1.75rem 0 0 0;
+        }
+    }
+
+    &__text-container-default {
+        display: flex;
+
+        &--comment {
+            word-wrap: break-word;
+            width: 96%;
+            color: $color-bandsite-black;
+            font-size: 0.8125rem;
+            font-family: avenir-regular;
+            margin: 0;
+            padding: 1rem 0 1.5rem 1rem;
+        }
+    }
+}
+
 // Footer Section
 .footer {
     height: 660px;
@@ -205,6 +342,7 @@ a {
     background-color: $color-bandsite-black;
     color: $color-white;
     text-decoration: none;
+
     &__tablet {
         padding-left: 1rem;
     }
@@ -398,6 +536,33 @@ a {
         }
     }
 
+    .comment {
+        margin: 0;
+        padding-left: 2.5rem;
+        padding-top: 2.5rem;
+
+        &__title {
+            font-size: 2.25rem;
+        }
+
+        &__name-container {
+            padding-left: 3rem;
+        }
+
+        &__text-container {
+            width: 30rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+        }
+
+        &__button {
+            padding-top: .3rem;
+            width: 10rem;
+            height: 2.5rem;
+            font-size: 1rem;
+            margin-left: 20rem;
+        }
+    }
 
     .footer {
         height: 25rem;
@@ -453,12 +618,13 @@ a {
 
     }
 }
-    .footer__contact--container {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        padding-right: 3rem;
-    }
+
+.footer__contact--container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-right: 3rem;
+}
 
 
 // Desktop Section
@@ -512,24 +678,34 @@ a {
             width: 75vw;
         }
     }
+
     .gallery {
         padding-left: 5.5rem;
     }
-     .footer {
-    padding: 4rem 5.5rem;
-    align-items: flex-start;
-    max-height: 23rem;
 
-    &__bltop {
-        padding-left: 45%;
+    .comment {
+        margin-left: 3rem;
+
+        &__name-container {
+            margin-left: 10rem;
+        }
     }
 
-    &__contact {
+    .footer {
+        padding: 4rem 5.5rem;
+        align-items: flex-start;
+        max-height: 23rem;
 
-    &--container {
-        padding-right: 8rem;
-    }
+        &__bltop {
+            padding-left: 45%;
+        }
 
+        &__contact {
+
+            &--container {
+                padding-right: 8rem;
+            }
+
+        }
     }
-}
 }

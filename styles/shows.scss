@@ -56,7 +56,9 @@ a {
         display: flex;
         justify-content: center;
         align-content: center;
+        padding-top: .2rem;
         padding-bottom: .55rem;
+        
 
         &:hover,
         &-active {
