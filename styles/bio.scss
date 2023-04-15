@@ -56,8 +56,7 @@ a {
         display: flex;
         justify-content: center;
         align-content: center;
-        padding-top: .2rem;
-        padding-bottom: .55rem;
+        padding: .2rem 0 .55rem 0;
 
         &:hover,
         &-active {
@@ -216,18 +215,18 @@ a {
     }
 
     &__image {
-        width: 4rem;
-        height: 4rem;
+        width: 3rem;
+        height: 3rem;
         border-radius: 50%;
-        margin-top: 1.5rem;
+        margin-top: 2rem;
     }
 
-    &__name-container {
+    &__namecontainer {
         display: flex;
         border-bottom: .15rem solid $color-mercury;
     }
 
-    &__input-container {
+    &__inputcontainer {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -241,7 +240,7 @@ a {
         }
     }
 
-    &__text-container {
+    &__textcontainer {
         font-size: .9rem;
         border: .1rem solid $color-bandsite-black;
         border-radius: .25rem;
@@ -284,60 +283,60 @@ a {
     }
 
     &__default {
-        border-bottom: 1px solid $color-mercury;
+        border-bottom: .15rem solid $color-mercury;
     }
 
     &__header {
         display: flex;
         justify-content: space-between;
 
-        &--image-one {
+        &--image-none {
             height: 3rem;
             width: 3rem;
             background-color: $color-mercury;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            float: left;
             border-radius: 2rem;
             margin-top: 1.5rem;
+            float: left;
         }
 
         &--name {
             color: $color-bandsite-black;
-            font-family: avenir-demi;
-            font-size: 0.8125rem;
+            font-family: "Avenir-Demi";
+            font-size: 1rem;
             padding: 1.75rem 0 0 1rem;
             margin: 0;
         }
 
         &--date {
             color: $color-silver;
-            font-family: avenir-regular;
-            font-size: 0.8125rem;
-            margin: 0;
-            padding: 1.75rem 0 0 0;
+            font-size: 1rem;
+            font-weight: 300;
+            padding-top: 1.75rem;
         }
     }
 
-    &__text-container-default {
+    &__textcontainer-default {
         display: flex;
 
         &--comment {
-            word-wrap: break-word;
-            width: 96%;
+            width: auto;
             color: $color-bandsite-black;
-            font-size: 0.8125rem;
-            font-family: avenir-regular;
+            font-size: 1rem;
+            font-weight: 500;
             margin: 0;
-            padding: 1rem 0 1.5rem 1rem;
+            padding-top: 1rem;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
         }
     }
 }
 
 // Footer Section
 .footer {
-    height: 660px;
+    height: 41.25rem;
     width: 100vw;
     background-color: $color-bandsite-black;
     color: $color-white;
@@ -545,11 +544,12 @@ a {
             font-size: 2.25rem;
         }
 
-        &__name-container {
-            padding-left: 3rem;
+        &__namecontainer {
+            margin-left: 5%;
+            width: 35rem;
         }
 
-        &__text-container {
+        &__textcontainer {
             width: 30rem;
             padding-top: 1rem;
             padding-left: 1rem;
@@ -561,6 +561,15 @@ a {
             height: 2.5rem;
             font-size: 1rem;
             margin-left: 20rem;
+        }
+
+        &__default {
+            margin-left: 5%;
+            width: 35rem;
+
+            &--comment {
+                margin-bottom: 2rem;
+            }
         }
     }
 
@@ -686,8 +695,13 @@ a {
     .comment {
         margin-left: 3rem;
 
-        &__name-container {
-            margin-left: 10rem;
+        &__namecontainer {
+            margin-left: 20vw;
+        }
+
+        &__default {
+            justify-content: center;
+            margin-left: 20vw;
         }
     }
 

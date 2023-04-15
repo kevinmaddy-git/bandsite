@@ -64,18 +64,19 @@
     </section>
     <section class="comment">
         <h1 class="comment__title">Join the Conversation</h1>
-        <div class="comment__name-container">
+        <div class="comment__namecontainer">
             <img class="comment__image" src="./assets/images/Mohan-muruge.jpg" alt="user-image">
-            <form class="comment__input-container">
-                <p class="comment__input-container--text">NAME</p>
-                <textarea class="comment__text-container comment__text-container--one">Enter your name</textarea>
-                <p class="comment__input-container--text">COMMENT</p>
-                <textarea class="comment__text-container comment__text-container--two">Add a new comment</textarea>
+            <form class="comment__inputcontainer">
+                <p class="comment__inputcontainer--text">NAME</p>
+                <textarea id="name-input" class="comment__textcontainer comment__textcontainer--one" name="name" placeholder="Enter your name">Enter your name</textarea>
+                <p class="comment__inputcontainer--text">COMMENT</p>
+                <textarea id="comment-textarea" class="comment__textcontainer comment__textcontainer--two" name="comment" placeholder="Add a new comment">Add a new comment</textarea>
                 <button class="comment__button">COMMENT</button>
             </form>
         </div>
+        <div class="comment__default--comment">
+        </div>
     </section>
-
     <footer class="footer">
         <div class="footer__tablet">
             <h2 class="footer__head">Get In Touch</h2>
@@ -120,7 +121,7 @@
             alt="Logo-bandsite">
         <p class="footer__copyright">Copyright The Bees Knees © 2021 All Rights Reserved</p>
     </footer>
-    <script src="./scripts/index-page.js"></script>
+    <script src="/scripts/index-page.js"></script>
 </body>
 
 </html>

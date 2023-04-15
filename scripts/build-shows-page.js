@@ -1,5 +1,4 @@
 const shows = document.querySelector('.shows__section')
-
 const bookShows = [
     {
         date: 'Mon Sept 06 2021',
