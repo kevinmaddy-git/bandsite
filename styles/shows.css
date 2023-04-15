@@ -10,6 +10,40 @@
   font-family: "Avenir-Bold";
   src: url("../../assets/Font/AvenirNextLTPro-Bold.otf");
 }
+@keyframes fadeInOut {
+  0% {
+    color: rgba(255, 0, 255, 0.839);
+  }
+  25% {
+    color: #ffffff;
+  }
+  50% {
+    color: rgba(255, 0, 255, 0.839);
+  }
+  75% {
+    color: #ffffff;
+  }
+  100% {
+    color: rgba(255, 0, 255, 0.839);
+  }
+}
+@keyframes fadeOutIn {
+  0% {
+    color: rgba(255, 0, 255, 0.839);
+  }
+  25% {
+    color: #323232;
+  }
+  50% {
+    color: rgba(255, 0, 255, 0.839);
+  }
+  75% {
+    color: #323232;
+  }
+  100% {
+    color: rgba(255, 0, 255, 0.839);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -65,7 +99,8 @@ a {
 .navbar__container--link:hover, .navbar__container--link-active {
   color: #ffffff;
   font-weight: 600;
-  border-bottom: #ffffff solid 0.25rem;
+  border-bottom: solid 0.25rem;
+  animation: fadeInOut 2s ease infinite;
 }
 
 .hero {
@@ -86,6 +121,7 @@ a {
   padding-left: 1rem;
   padding-top: 4rem;
   font-size: 1.25rem;
+  animation: fadeInOut 2s ease infinite;
 }
 .hero__album--text {
   color: #ffffff;
@@ -93,6 +129,7 @@ a {
   font-size: 2.525rem;
   padding-top: 2rem;
   width: 25rem;
+  animation: fadeInOut 2s ease infinite;
 }
 .hero__music {
   width: 93vw;
@@ -118,6 +155,7 @@ a {
   font-weight: bold;
   margin-bottom: 2.4rem;
   padding-left: 1rem;
+  animation: fadeOutIn 2s ease infinite;
 }
 .shows__header {
   display: none;
@@ -135,6 +173,12 @@ a {
   padding: 1.6rem 0;
   padding-left: 1rem;
 }
+.shows__section .card:hover {
+  background-color: #fafafa;
+}
+.shows__section .card.selected {
+  background-color: #e1e1e1;
+}
 .shows__section .card__label {
   font-size: 1rem;
   color: #e1e1e1;
@@ -151,14 +195,7 @@ a {
   margin-bottom: 2.4rem;
   margin-right: 8.8rem;
   width: 13.6rem;
-}
-.shows__section .card__text-title-alt {
-  font-size: 1rem;
-  line-height: 1rem;
-  font-weight: 600;
-  margin-bottom: 1.6rem;
-  margin-right: 0;
-  width: 28.8rem;
+  animation: fadeOutIn 2s ease infinite;
 }
 .shows__section .card__text {
   font-size: 1.25rem;
@@ -174,7 +211,6 @@ a {
   border-radius: 0.4rem;
   border-style: none;
   background-color: #323232;
-  color: #ffffff;
   text-decoration: none;
   font-size: 1.5rem;
   line-height: 1rem;
@@ -184,25 +220,16 @@ a {
   margin-top: 0.8rem;
   outline-style: none;
   cursor: pointer;
+  animation: fadeInOut 2s ease infinite;
 }
-.shows__section .card .button-alt {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  border-radius: 0.4rem;
-  border-style: none;
-  background-color: #323232;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1rem;
-  line-height: 100rem;
-  font-weight: 400;
-  width: 12rem;
-  height: 3rem;
-  margin-top: 0.8rem;
-  outline-style: none;
-  cursor: pointer;
+.shows__section .card .button:hover {
+  background-color: #000000;
+}
+.shows__section .card .button:focus {
+  animation: none;
+  background-color: rgba(255, 0, 255, 0.839);
+  color: #000000;
+  transition: 0.5s;
 }
 
 .footer {
@@ -220,6 +247,7 @@ a {
   padding-top: 1.5rem;
   font-family: "avenir-demi";
   padding-bottom: 1rem;
+  animation: fadeInOut 2s ease infinite;
 }
 .footer__icons {
   padding: 0 1.75rem 0 0;
@@ -241,6 +269,7 @@ a {
 .footer__email {
   color: #ffffff;
   font-size: 0.813rem;
+  animation: fadeInOut 2s ease infinite;
 }
 .footer__blbottom {
   padding-top: 3rem;
@@ -373,6 +402,7 @@ a {
     width: 12rem;
     height: 3rem;
     margin-left: -8rem;
+    margin-right: 1rem;
   }
   .footer {
     height: 25rem;

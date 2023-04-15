@@ -3,6 +3,50 @@
 @use './partials/mixins' as *;
 @use './partials/font' as *;
 
+@keyframes fadeInOut {
+    0% {
+        color: $color-highlight;
+    }
+
+    25% {
+        color: $color-white;
+    }
+
+    50% {
+        color: $color-highlight;
+    }
+
+    75% {
+        color: $color-white;
+    }
+
+    100% {
+        color: $color-highlight;
+    }
+}
+
+@keyframes fadeOutIn {
+    0% {
+        color: $color-highlight;
+    }
+
+    25% {
+        color: $color-bandsite-black;
+    }
+
+    50% {
+        color: $color-highlight;
+    }
+
+    75% {
+        color: $color-bandsite-black;
+    }
+
+    100% {
+        color: $color-highlight;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +76,6 @@ a {
     &--logo {
         margin-top: 1.3rem;
         height: 1.25rem;
-        width: 7.5;
         display: flex;
         justify-content: center;
         align-content: center;
@@ -61,7 +104,8 @@ a {
         &-active {
             color: $color-white;
             font-weight: 600;
-            border-bottom: $color-white solid 0.25rem;
+            border-bottom: solid 0.25rem;
+            animation: fadeInOut 2s ease infinite;
         }
     }
 }
@@ -94,6 +138,7 @@ a {
         padding-left: 1rem;
         font-size: 1.525rem;
         height: 100%;
+        animation: fadeInOut 2s ease infinite;
     }
 }
 
@@ -114,6 +159,8 @@ a {
         font-family: 'Avenir-Demi';
         font-size: 1.5rem;
         line-height: 3.2rem;
+        animation: fadeOutIn 2s ease infinite;
+
     }
 
     &--picture {
@@ -168,6 +215,7 @@ a {
         font-family: 'Avenir-Demi';
         font-size: 1.75rem;
         padding-top: 1rem;
+        animation: fadeOutIn 2s ease infinite;
     }
 
     &__row {
@@ -190,6 +238,7 @@ a {
     }
 
     img:hover {
+        transition: 2s;
         filter: none;
         -webkit-filter: grayscale(0%);
         -moz-filter: grayscale(0%);
@@ -209,13 +258,14 @@ a {
         font-size: 1.75rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
+        animation: fadeOutIn 2s ease infinite;
     }
 
     &__image {
-        width: 3rem;
-        height: 3rem;
+        width: 2.5rem;
+        height: 2.5rem;
         border-radius: 50%;
-        margin-top: 2rem;
+        margin-top: 2.5rem;
     }
 
     &__namecontainer {
@@ -246,6 +296,7 @@ a {
         border-color: $color-mercury;
         resize: none;
 
+
         &:focus {
             border: .15rem solid $color-bandsite-black;
         }
@@ -255,6 +306,7 @@ a {
             height: 3rem;
             padding-top: .825rem;
             padding-left: .625rem;
+            animation: fadeOutIn 2s ease infinite;
         }
 
         &--two {
@@ -271,12 +323,16 @@ a {
         border-style: none;
         height: 4rem;
         border-radius: 0.25rem;
-        color: $color-white;
+        animation: fadeInOut 2s ease infinite;
         text-align: center;
         width: 22rem;
         margin-bottom: 1rem;
         padding-top: .5rem;
         cursor: pointer;
+
+        &:hover {
+            background-color: $color-bandsite-darkblack;
+        }
     }
 
     &__default {
@@ -288,8 +344,8 @@ a {
         justify-content: space-between;
 
         &--image-none {
-            height: 3rem;
-            width: 3rem;
+            height: 2.5rem;
+            width: 2.5rem;
             background-color: $color-mercury;
             background-size: cover;
             background-position: center;
@@ -301,11 +357,11 @@ a {
         }
 
         &--name {
-            color: $color-bandsite-black;
             font-family: "Avenir-Demi";
             font-size: 1rem;
             padding: 1.75rem 0 0 0;
             margin: 0;
+            animation: fadeOutIn 2s ease infinite;
         }
 
         &--date {
@@ -348,6 +404,7 @@ a {
         padding-top: 1.5rem;
         font-family: 'avenir-demi';
         padding-bottom: 1rem;
+        animation: fadeInOut 2s ease infinite;
     }
 
     &__icons {
@@ -374,6 +431,7 @@ a {
     &__email {
         color: $color-white;
         font-size: .813rem;
+        animation: fadeInOut 2s ease infinite;
     }
 
     &__blbottom {
@@ -540,7 +598,7 @@ a {
     // Tablet Comments
     .comment {
         margin: 0;
-        padding-left: 2.5rem;
+        padding-left: 5vw;
         padding-top: 2.5rem;
 
         &__title {
@@ -556,6 +614,18 @@ a {
             width: 30rem;
             padding-top: 1rem;
             padding-left: 1rem;
+        }
+
+        &__image {
+            height: 3rem;
+            width: 3rem;
+        }
+
+        &__header {
+            &--image-none {
+                height: 3rem;
+                width: 3rem;
+            }
         }
 
         &__button {
@@ -703,7 +773,7 @@ a {
 
     // Desktop Comments
     .comment {
-        margin-left: 3rem;
+        margin-left: 1rem;
 
         &__namecontainer {
             margin-left: 20vw;
