@@ -1,3 +1,4 @@
+// Link Partials
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
 @use './partials/font' as *;
@@ -12,8 +13,6 @@
 a {
     text-decoration: none;
 }
-
-@include media;
 
 // Navbar Section
 .navbar {
@@ -182,8 +181,6 @@ a {
         width: 90vw;
     }
 
-
-
     img[src*=gallery] {
         -webkit-filter: grayscale(100%);
         -moz-filter: grayscale(100%);
@@ -230,7 +227,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-left: 2rem;
+        padding-left: 1rem;
 
         &--text {
             color: $color-silver;
@@ -300,13 +297,14 @@ a {
             border-radius: 2rem;
             margin-top: 1.5rem;
             float: left;
+            margin-right: 1rem;
         }
 
         &--name {
             color: $color-bandsite-black;
             font-family: "Avenir-Demi";
             font-size: 1rem;
-            padding: 1.75rem 0 0 1rem;
+            padding: 1.75rem 0 0 0;
             margin: 0;
         }
 
@@ -325,10 +323,9 @@ a {
             width: auto;
             color: $color-bandsite-black;
             font-size: 1rem;
-            font-weight: 500;
             margin: 0;
+            font-weight: 500;
             padding-top: 1rem;
-            padding-left: 1rem;
             padding-bottom: 1rem;
         }
     }
@@ -394,6 +391,8 @@ a {
 
 // Tablet Section
 @include tablet {
+
+    // Tablet Navbar
     .navbar__container {
         display: flex;
         flex-direction: row;
@@ -433,6 +432,7 @@ a {
         }
     }
 
+    // Tablet Hero
     .hero {
         height: 26rem;
 
@@ -448,6 +448,7 @@ a {
         }
     }
 
+    // Tablet About
     .about {
         display: flex;
     }
@@ -513,6 +514,7 @@ a {
         }
     }
 
+    // Tablet Gallery
     .gallery {
         padding: 1rem 0 1rem 3rem;
         width: 100vw;
@@ -535,6 +537,7 @@ a {
         }
     }
 
+    // Tablet Comments
     .comment {
         margin: 0;
         padding-left: 2.5rem;
@@ -573,6 +576,7 @@ a {
         }
     }
 
+    // Tablet Footer
     .footer {
         height: 25rem;
         padding-top: 4rem;
@@ -638,6 +642,8 @@ a {
 
 // Desktop Section
 @include desktop {
+
+    // Desktop Navbar
     .navbar__container {
         padding-left: 3.94rem;
         box-sizing: border-box;
@@ -645,6 +651,7 @@ a {
         justify-content: flex-start;
     }
 
+    // Desktop Hero
     .hero {
         height: 35rem;
         max-width: 100vw;
@@ -661,6 +668,7 @@ a {
         }
     }
 
+    // Desktop About
     .about__section {
         margin-left: 6rem;
 
@@ -688,10 +696,12 @@ a {
         }
     }
 
+    // Desktop Gallery
     .gallery {
         padding-left: 5.5rem;
     }
 
+    // Desktop Comments
     .comment {
         margin-left: 3rem;
 
@@ -705,6 +715,7 @@ a {
         }
     }
 
+    // Desktop Footer
     .footer {
         padding: 4rem 5.5rem;
         align-items: flex-start;

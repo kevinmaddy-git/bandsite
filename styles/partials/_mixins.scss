@@ -2,16 +2,11 @@
 @mixin desktop() {
     @media (min-width: 1280px) {
         @content;
-    }    
+    }
 }
 
 @mixin tablet() {
     @media (min-width: 768px) {
-        @content;
-    }    
-}
-@mixin media() {
-    @media (max-width: 767px) {
         @content;
     }
 }

@@ -1,3 +1,6 @@
+// Linking Style
+const commentstyle = document.querySelector('.comment__default')
+// Comments Array
 const comments = [
     {
         name: "Connor Walton",
@@ -15,7 +18,7 @@ const comments = [
         comment: "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."
     }
 ];
-
+// Default Comments Array
 function displayComments(arr) {
     let commentContainer = document.querySelector(".comment__default--comment");
 
@@ -57,9 +60,9 @@ function displayComments(arr) {
     }
 }
 displayComments(comments);
-
+// // New Comments Section
 const form = document.querySelector(".comment__inputcontainer");
-
+// Prevent page refresh
 form.addEventListener("submit", submitEvent => {
     submitEvent.preventDefault();
 
@@ -117,20 +120,17 @@ form.addEventListener("submit", submitEvent => {
 
     let clearInput = document.querySelector(".comment__inputcontainer");
     clearInput.reset();
-    
-});
 
-document.addEventListener("DOMContentLoaded", function() {
+});
+// Focus events on name/comment boxes
+document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.querySelector('#name-input');
     const commentTextarea = document.querySelector('#comment-textarea');
 
-    nameInput.addEventListener('focus', function() {
-      nameInput.value = '';
+    nameInput.addEventListener('focus', function () {
+        nameInput.value = '';
     });
-  
-    // Add focus event listener to comment textarea element
-    commentTextarea.addEventListener('focus', function() {
-      // Clear textarea value when focused
-      commentTextarea.value = '';
+    commentTextarea.addEventListener('focus', function () {
+        commentTextarea.value = '';
     });
-  });
+});

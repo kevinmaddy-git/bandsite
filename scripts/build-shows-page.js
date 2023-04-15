@@ -1,4 +1,6 @@
+// Linking Style
 const shows = document.querySelector('.shows__section')
+// Shows Array
 const bookShows = [
     {
         date: 'Mon Sept 06 2021',
@@ -31,7 +33,7 @@ const bookShows = [
         location: 'San Francisco, CA',
     },
 ]
-
+// Cards for Show
 function displayShows(show) {
 
     const card = document.createElement('div');
@@ -86,7 +88,7 @@ function displayShows(show) {
     button.innerText = 'BUY TICKETS';
     card.appendChild(button);
 }
-
+// Button
 function buttonHandler() {
     shows.innerHTML = '';
     displayTickets();
@@ -117,7 +119,7 @@ function displayTickets() {
     button.innerText = 'BACK TO SHOWS';
     card.appendChild(button);
 }
-
+// Display cards
 bookShows.forEach(show => displayShows(show));
 
 
