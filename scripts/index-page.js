@@ -122,15 +122,26 @@ form.addEventListener("submit", submitEvent => {
     clearInput.reset();
 
 });
-// Focus events on name/comment boxes
 document.addEventListener("DOMContentLoaded", function () {
     const nameInput = document.querySelector('#name-input');
     const commentTextarea = document.querySelector('#comment-textarea');
 
+    // Focus event listener for name input
     nameInput.addEventListener('focus', function () {
         nameInput.value = '';
     });
+
+    // Focus event listener for comment textarea
     commentTextarea.addEventListener('focus', function () {
         commentTextarea.value = '';
+    });
+
+    // Input event listener for name input
+    nameInput.addEventListener("input", () => {
+        if (nameInput.value.trim() === "") {
+            nameInput.style.borderColor = "red";
+        } else {
+            nameInput.style.borderColor = "";
+        }
     });
 });

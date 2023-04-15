@@ -3,6 +3,50 @@
 @use './partials/mixins' as *;
 @use './partials/font' as *;
 
+@keyframes fadeInOut {
+    0% {
+        color: $color-highlight;
+    }
+
+    25% {
+        color: $color-white;
+    }
+
+    50% {
+        color: $color-highlight;
+    }
+
+    75% {
+        color: $color-white;
+    }
+
+    100% {
+        color: $color-highlight;
+    }
+}
+
+@keyframes fadeOutIn {
+    0% {
+        color: $color-highlight;
+    }
+
+    25% {
+        color: $color-bandsite-black;
+    }
+
+    50% {
+        color: $color-highlight;
+    }
+
+    75% {
+        color: $color-bandsite-black;
+    }
+
+    100% {
+        color: $color-highlight;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -63,7 +107,8 @@ a {
         &-active {
             color: $color-white;
             font-weight: 600;
-            border-bottom: $color-white solid 0.25rem;
+            border-bottom: solid 0.25rem;
+            animation: fadeInOut 2s ease infinite;
         }
     }
 }
@@ -88,6 +133,7 @@ a {
         padding-left: 1rem;
         padding-top: 4rem;
         font-size: 1.25rem;
+        animation: fadeInOut 2s ease infinite;
 
         &--text {
             color: $color-white;
@@ -95,6 +141,7 @@ a {
             font-size: 2.525rem;
             padding-top: 2rem;
             width: 25rem;
+            animation: fadeInOut 2s ease infinite;
         }
     }
 
@@ -117,7 +164,6 @@ a {
     padding-top: 3rem;
     margin-bottom: 5rem;
 
-
     &__title {
         font-family: 'Avenir-Demi';
         font-size: 2rem;
@@ -125,6 +171,7 @@ a {
         font-weight: bold;
         margin-bottom: 2.4rem;
         padding-left: 1rem;
+        animation: fadeOutIn 2s ease infinite;
     }
 
 
@@ -145,6 +192,14 @@ a {
             padding: 1.6rem 0;
             padding-left: 1rem;
 
+            &:hover {
+                background-color: $color-alabaster;
+            }
+
+            &.selected {
+                background-color: $color-mercury;
+            }
+
             &__label {
                 font-size: 1rem;
                 color: $color-mercury;
@@ -163,16 +218,9 @@ a {
                 margin-bottom: 2.4rem;
                 margin-right: 8.8rem;
                 width: 13.6rem;
+                animation: fadeOutIn 2s ease infinite;
             }
 
-            &__text-title-alt {
-                font-size: 1rem;
-                line-height: 1rem;
-                font-weight: 600;
-                margin-bottom: 1.6rem;
-                margin-right: 0;
-                width: 28.8rem;
-            }
 
             &__text {
                 font-size: 1.25rem;
@@ -189,7 +237,6 @@ a {
                 border-radius: 0.4rem;
                 border-style: none;
                 background-color: $color-bandsite-black;
-                color: $color-white;
                 text-decoration: none;
                 font-size: 1.5rem;
                 line-height: 1rem;
@@ -199,25 +246,17 @@ a {
                 margin-top: 0.8rem;
                 outline-style: none;
                 cursor: pointer;
+                animation: fadeInOut 2s ease infinite;
 
-                &-alt {
-                    display: flex;
-                    justify-content: center;
-                    text-align: center;
-                    align-items: center;
-                    border-radius: 0.4rem;
-                    border-style: none;
-                    background-color: $color-bandsite-black;
-                    color: $color-white;
-                    text-decoration: none;
-                    font-size: 1rem;
-                    line-height: 100rem;
-                    font-weight: 400;
-                    width: 12rem;
-                    height: 3rem;
-                    margin-top: 0.8rem;
-                    outline-style: none;
-                    cursor: pointer;
+                &:hover {
+                    background-color: $color-bandsite-darkblack;
+                }
+
+                &:focus {
+                    animation: none;
+                    background-color: $color-highlight;
+                    color: $color-bandsite-darkblack;
+                    transition: .5s;
                 }
             }
         }
@@ -241,6 +280,7 @@ a {
         padding-top: 1.5rem;
         font-family: 'avenir-demi';
         padding-bottom: 1rem;
+        animation: fadeInOut 2s ease infinite;
     }
 
     &__icons {
@@ -267,6 +307,7 @@ a {
     &__email {
         color: $color-white;
         font-size: .813rem;
+        animation: fadeInOut 2s ease infinite;
     }
 
     &__blbottom {
@@ -427,6 +468,7 @@ a {
                 width: 12rem;
                 height: 3rem;
                 margin-left: -8rem;
+                margin-right: 1rem;
             }
         }
     }
