@@ -1,0 +1,585 @@
+// Link Partials
+@use './partials/variables' as *;
+@use './partials/mixins' as *;
+@use './partials/font' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Avenir-Regular", "Avenir-Demi", "Avenir-Bold", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+// Navbar Section
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar__container {
+    background-color: $color-bandsite-black;
+    min-width: 100vw;
+    height: 5.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+
+    &--logo {
+        margin-top: 1.3rem;
+        height: 1.25rem;
+        width: 7.5;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    &--list {
+        margin-top: 1.6rem;
+        height: 2.7rem;
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: .5rem;
+    }
+
+    &--link {
+        text-decoration: none;
+        height: 100%;
+        width: 50vw;
+        color: $color-mercury;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding-top: .2rem;
+        padding-bottom: .55rem;
+
+
+        &:hover,
+        &-active {
+            color: $color-white;
+            font-weight: 600;
+            border-bottom: $color-white solid 0.25rem;
+        }
+    }
+}
+
+// Hero Section
+.hero {
+    width: 100vw;
+    height: 26.125rem;
+    background-image: url(../assets/Images/hero-shows.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &-overlay {
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        width: 100vw;
+        height: 26.125rem;
+    }
+
+    &__album {
+        color: $color-white;
+        padding-left: 1rem;
+        padding-top: 4rem;
+        font-size: 1.25rem;
+
+        &--text {
+            color: $color-white;
+            padding-left: 1rem;
+            font-size: 2.525rem;
+            padding-top: 2rem;
+            width: 25rem;
+        }
+    }
+
+    &__music {
+        width: 93vw;
+        padding-left: 1rem;
+        padding-top: 2rem;
+        border: none;
+    }
+}
+
+// Shows Section
+.shows {
+    background-color: $color-white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-top: 3rem;
+    margin-bottom: 5rem;
+
+
+    &__title {
+        font-family: 'Avenir-Demi';
+        font-size: 2rem;
+        line-height: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 2.4rem;
+        padding-left: 1rem;
+    }
+
+
+    &__header {
+        display: none;
+    }
+
+    &__section {
+        width: 100%;
+
+        .card {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            border-bottom: 0.15rem solid $color-mercury;
+            padding: 1.6rem 0;
+            padding-left: 1rem;
+
+            &__label {
+                font-size: 1rem;
+                color: $color-mercury;
+                margin-bottom: 1.5rem;
+                width: 13.6rem;
+
+                &--margin {
+                    margin-right: 8.8rem;
+                }
+            }
+
+            &__text-title {
+                font-size: 1.3rem;
+                line-height: 1rem;
+                font-weight: 700;
+                margin-bottom: 2.4rem;
+                margin-right: 8.8rem;
+                width: 13.6rem;
+            }
+
+            &__text-title-alt {
+                font-size: 1rem;
+                line-height: 1rem;
+                font-weight: 600;
+                margin-bottom: 1.6rem;
+                margin-right: 0;
+                width: 28.8rem;
+            }
+
+            &__text {
+                font-size: 1.25rem;
+                line-height: 1rem;
+                margin-bottom: 2.4rem;
+                width: 13.6rem;
+            }
+
+            .button {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                border-radius: 0.4rem;
+                border-style: none;
+                background-color: $color-bandsite-black;
+                color: $color-white;
+                text-decoration: none;
+                font-size: 1.5rem;
+                line-height: 1rem;
+                font-weight: 600;
+                width: 90vw;
+                height: 4rem;
+                margin-top: 0.8rem;
+                outline-style: none;
+                cursor: pointer;
+
+                &-alt {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 0.4rem;
+                    border-style: none;
+                    background-color: $color-bandsite-black;
+                    color: $color-white;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    line-height: 100rem;
+                    font-weight: 400;
+                    width: 12rem;
+                    height: 3rem;
+                    margin-top: 0.8rem;
+                    outline-style: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// Footer Section
+.footer {
+    height: 660px;
+    width: 100vw;
+    background-color: $color-bandsite-black;
+    color: $color-white;
+    text-decoration: none;
+
+    &__tablet {
+        padding-left: 1rem;
+    }
+
+    &__head {
+        margin-top: -3.5rem;
+        padding-top: 1.5rem;
+        font-family: 'avenir-demi';
+        padding-bottom: 1rem;
+    }
+
+    &__icons {
+        padding: 0 1.75rem 0 0;
+    }
+
+    &__bltop {
+        display: none;
+    }
+
+    &__name {
+        line-height: 1.125rem;
+        padding: 1.5rem 0 1rem 0;
+        font-size: .875rem;
+        font-weight: 500;
+    }
+
+    &__address {
+        line-height: 1.125rem;
+        padding: 0 0 1rem 0;
+        font-size: .813rem;
+    }
+
+    &__email {
+        color: $color-white;
+        font-size: .813rem;
+    }
+
+    &__blbottom {
+        padding-top: 3rem;
+        padding-left: 1rem;
+    }
+
+    &__copyright {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 0.688rem;
+        padding-left: 1rem;
+    }
+}
+
+// Tablet Section
+@include tablet {
+
+    // Tablet Navbar
+    .navbar__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-content: flex-start;
+        padding-left: 1rem;
+
+        &--logo {
+            padding-left: 1rem;
+            margin-top: 2.6rem;
+            padding-right: 2rem;
+        }
+
+        &--list {
+            margin-top: 0;
+            height: 8rem;
+            width: fit-content;
+        }
+
+        &--link {
+            margin-left: 1rem;
+            padding-bottom: .9rem;
+            width: 5rem;
+            align-items: center;
+
+            &:hover,
+            &-active {
+                color: $color-white;
+                font-weight: 500;
+                text-decoration-line: underline;
+                border-bottom: none;
+                text-decoration-thickness: .25rem;
+                text-underline-offset: 1.75rem;
+                padding-bottom: 1.125rem;
+                padding-top: .388rem;
+            }
+        }
+    }
+
+    // Tablet Hero
+    .hero {
+        height: 30rem;
+
+        &-overlay {
+            height: 30rem;
+        }
+
+        &__album {
+            padding-left: 3rem;
+            font-weight: 600;
+
+            &--text {
+                width: 40rem;
+                font-size: 3.75rem;
+                line-height: 4.25rem;
+                font-weight: 700;
+                padding-left: 3rem;
+            }
+        }
+
+        &__music {
+            width: 60vw;
+            padding-left: 3rem;
+        }
+    }
+
+    // Tablet Shows
+    .shows {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2rem;
+        margin-bottom: 3rem;
+
+
+        &__title {
+            align-self: flex-start;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        &__header {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &__heading {
+            width: 9rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: $color-mercury;
+            padding-right: 6rem;
+            margin-right: 2rem;
+
+            &--margin {
+                margin-right: 6rem;
+                padding-left: 1rem;
+            }
+        }
+
+        .card {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 90vw;
+            height: 6rem;
+            align-items: center;
+
+            &__label {
+                display: none;
+            }
+
+            &__text-title {
+                font-size: 1rem;
+                margin-bottom: 0rem;
+                padding-top: 2rem;
+                justify-content: left;
+            }
+
+            &__text-title-alt {
+                font-size: 1rem;
+                margin-bottom: 0rem;
+            }
+
+            &__text {
+                font-size: 1rem;
+                display: flex;
+                justify-content: left;
+                margin-left: -8.5rem;
+                margin-right: 6rem;
+                padding-top: 4rem;
+
+            }
+
+            .button {
+                font-size: .9rem;
+                margin-top: 1rem;
+                width: 12rem;
+                height: 3rem;
+                margin-left: -8rem;
+            }
+        }
+    }
+
+    // Tablet Footer
+    .footer {
+        height: 25rem;
+        padding-top: 4rem;
+        padding-left: 3rem;
+
+        &__head {
+            font-size: 2.25rem;
+            display: flex;
+            justify-content: left;
+            padding-top: 2rem;
+            padding-right: 2.625rem;
+        }
+
+        &__icons {
+            height: 1.875rem;
+            width: 0.625rem;
+            margin-top: -1.2rem;
+            padding-right: 3rem;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        &__name {
+            padding-bottom: 1.5rem;
+        }
+
+        &__address {
+            padding-bottom: 1.5rem;
+        }
+
+        &__copyright {
+            padding-top: 2.625rem;
+            padding-bottom: 2rem;
+        }
+
+        &__tablet {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__bltop {
+            display: flex;
+            width: 7.5rem;
+            height: 1.25rem;
+            margin-top: -1rem;
+            padding-left: 24%;
+        }
+
+        &__blbottom {
+            display: none;
+        }
+
+    }
+}
+
+.footer__contact--container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-right: 3rem;
+}
+
+
+// Desktop Section
+@include desktop {
+
+    // Desktop Navbar
+    .navbar__container {
+        padding-left: 3.94rem;
+        box-sizing: border-box;
+        width: 100vw;
+        justify-content: flex-start;
+    }
+
+    // Desktop Hero
+    .hero {
+        height: 40rem;
+        max-width: 100vw;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &-overlay {
+            height: 40rem;
+
+        }
+
+        &__row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 8rem;
+        }
+
+        &__music {
+            width: 33rem;
+            margin-top: 12rem;
+        }
+
+        &__album {
+            display: flex;
+            flex-direction: column;
+            margin-left: 2rem;
+
+
+            &--text {
+                width: 33rem;
+                margin-left: 2rem;
+
+            }
+        }
+    }
+
+    // Desktop Shows
+    .shows {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 4rem .5rem 1rem 3rem;
+        width: 100%;
+
+        &__title {
+            margin-right: 10rem;
+        }
+    }
+
+    // Desktop Footer
+    .footer {
+        padding: 4rem 5.5rem;
+        align-items: flex-start;
+        max-height: 23rem;
+
+        &__bltop {
+            padding-left: 50%;
+        }
+
+        &__contact {
+
+            &--container {
+                padding-right: 8rem;
+            }
+
+        }
+    }
+}
