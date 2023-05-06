@@ -3,50 +3,6 @@
 @use './partials/mixins' as *;
 @use './partials/font' as *;
 
-@keyframes fadeInOut {
-    0% {
-        color: $color-highlight;
-    }
-
-    25% {
-        color: $color-white;
-    }
-
-    50% {
-        color: $color-highlight;
-    }
-
-    75% {
-        color: $color-white;
-    }
-
-    100% {
-        color: $color-highlight;
-    }
-}
-
-@keyframes fadeOutIn {
-    0% {
-        color: $color-highlight;
-    }
-
-    25% {
-        color: $color-bandsite-black;
-    }
-
-    50% {
-        color: $color-highlight;
-    }
-
-    75% {
-        color: $color-bandsite-black;
-    }
-
-    100% {
-        color: $color-highlight;
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -105,7 +61,6 @@ a {
             color: $color-white;
             font-weight: 600;
             border-bottom: solid 0.25rem;
-            animation: fadeInOut 2s ease infinite;
         }
     }
 }
@@ -138,7 +93,6 @@ a {
         padding-left: 1rem;
         font-size: 1.525rem;
         height: 100%;
-        animation: fadeInOut 2s ease infinite;
     }
 }
 
@@ -318,12 +272,12 @@ a {
 
     &__button {
         background-color: $color-bandsite-black;
+        color: $color-white;
         font-weight: 400;
         font-size: 1.5rem;
         border-style: none;
         height: 4rem;
         border-radius: 0.25rem;
-        animation: fadeInOut 2s ease infinite;
         text-align: center;
         width: 22rem;
         margin-bottom: 1rem;

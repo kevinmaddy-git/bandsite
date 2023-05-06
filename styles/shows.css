@@ -10,40 +10,6 @@
   font-family: "Avenir-Bold";
   src: url("../../assets/Font/AvenirNextLTPro-Bold.otf");
 }
-@keyframes fadeInOut {
-  0% {
-    color: rgba(255, 0, 255, 0.839);
-  }
-  25% {
-    color: #ffffff;
-  }
-  50% {
-    color: rgba(255, 0, 255, 0.839);
-  }
-  75% {
-    color: #ffffff;
-  }
-  100% {
-    color: rgba(255, 0, 255, 0.839);
-  }
-}
-@keyframes fadeOutIn {
-  0% {
-    color: rgba(255, 0, 255, 0.839);
-  }
-  25% {
-    color: #323232;
-  }
-  50% {
-    color: rgba(255, 0, 255, 0.839);
-  }
-  75% {
-    color: #323232;
-  }
-  100% {
-    color: rgba(255, 0, 255, 0.839);
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -211,6 +177,7 @@ a {
   border-radius: 0.4rem;
   border-style: none;
   background-color: #323232;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.5rem;
   line-height: 1rem;
@@ -227,8 +194,7 @@ a {
 }
 .shows__section .card .button:focus {
   animation: none;
-  background-color: rgba(255, 0, 255, 0.839);
-  color: #000000;
+  background-color: #000000;
   transition: 0.5s;
 }
 
