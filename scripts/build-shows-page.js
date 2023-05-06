@@ -1,38 +1,4 @@
-const shows = document.querySelector('.shows__section');
-
-// Shows Array
-const bookShows = [
-  {
-    date: 'Mon Sept 06 2021',
-    venue: 'Ronald Lane',
-    location: 'San Francisco, CA',
-  },
-  {
-    date: 'Tue Sept 21 2021',
-    venue: 'Pier 3 East',
-    location: 'San Francisco, CA',
-  },
-  {
-    date: 'Fri Oct 15 2021',
-    venue: 'View Lounge',
-    location: 'San Francisco, CA',
-  },
-  {
-    date: 'Sat Nov 06 2021',
-    venue: 'Hyatt Agency',
-    location: 'San Francisco, CA',
-  },
-  {
-    date: 'Fri Nov 26 2021',
-    venue: 'Moscow Center',
-    location: 'San Francisco, CA',
-  },
-  {
-    date: 'Wed Dec 15 2021',
-    venue: 'Press Club',
-    location: 'San Francisco, CA',
-  },
-];
+const apiKey = "3dbe1dce-3a08-47d5-baf1-8f70e87ccaaa";
 
 // Cards for Show
 function displayShows(show) {
@@ -49,9 +15,11 @@ function displayShows(show) {
   dateLabel.innerText = 'DATE';
   dateWrap.appendChild(dateLabel);
 
+  const showdate = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+
   const date = document.createElement('p');
   date.classList.add('card__text-title');
-  date.innerText = show.date;
+  date.innerText = new Date(show.date).toLocaleDateString('en-US', showdate).replace(',', '').replace('Sep', 'Sept');
   dateWrap.appendChild(date);
 
   const venueWrap = document.createElement('div');
@@ -65,7 +33,7 @@ function displayShows(show) {
 
   const venue = document.createElement('p');
   venue.classList.add('card__text');
-  venue.innerText = show.venue;
+  venue.innerText = show.place;
   venueWrap.appendChild(venue);
 
   const locationWrap = document.createElement('div');
@@ -90,17 +58,26 @@ function displayShows(show) {
 }
 
 // Display cards
-bookShows.forEach(show => displayShows(show));
+axios.get(`https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}`)
+  .then(response => {
+    response.data.forEach(show => {
+      displayShows(show);
+    });
+  })
+  .catch(error => {
+    console.log(error);
+  });
 
 // Add event listener for show highlight
-shows.addEventListener('click', function(event) {
-    const card = event.target.closest('.card');
-    if (card) {
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => card.classList.remove('selected'));
-      card.classList.add('selected');
-    }
-  });
-$(document).on('click', '.card', function(event) {
-    event.stopPropagation();
-  });
+shows.addEventListener('click', function (event) {
+  const card = event.target.closest('.card');
+  if (card) {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => card.classList.remove('selected'));
+    card.classList.add('selected');
+  }
+});
+
+$(document).on('click', '.card', function (event) {
+  event.stopPropagation();
+});
